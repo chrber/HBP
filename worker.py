@@ -7,12 +7,11 @@ import requests
 import time
 
 THREAD_NUM = 8
-ENDPOINT = '149.156.9.143:8888'
-# ENDPOINT = 'dcache-dot12.desy.de:8888'
+# ENDPOINT = '149.156.9.143:8888/image/v0/api/bbic?fname=/srv/data'
+ENDPOINT = 'dcache-dot12.desy.de:8888/image/v0/api/bbic?fname=/srv/data/HBP'
 
 def do_request((stack, level, slice, x, y)):
-	url = 'http://{endpoint}/image/v0/api/bbic?fname=' \
-	'/srv/data/BigBrain_jpeg.h5&mode=ims&prog=' \
+	url = 'http://{endpoint}/BigBrain_jpeg.h5&mode=ims&prog=' \
 	'TILE%200%20{stack}%20{level}%20{slice}%20{x}%20{y}%20none%2010%201'.format(
 		endpoint = ENDPOINT,
 		stack = stack,
