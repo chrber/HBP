@@ -7,8 +7,8 @@ WGET_OPTS=${2}
 STACKS=`seq 0 0`
 LEVELS=`seq 0 0`
 SLICES=`seq 3699 3699`
-XS=`seq 1 20`
-YS=`seq 1 20`
+XS=`seq 1 1`
+YS=`seq 1 1`
 
 mkdir -p ${WORKER_DIR}
 rm -rf ${WORKER_DIR}/*
