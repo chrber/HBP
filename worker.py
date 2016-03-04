@@ -21,6 +21,15 @@ def do_request((stack, level, slice, x, y)):
 		x = x,
 		y = y
 	)
+#        url = 'http://{endpoint}/stacks/rat/Golgi/golgi_rat_sections.h5&mode=ims&prog=' \
+#        'TILE%200%20{stack}%20{level}%20{slice}%20{x}%20{y}%20none%2010%201'.format(
+#                endpoint = ENDPOINT,
+#                stack = stack,
+#                level = level,
+#                slice = slice,
+#                x = x,
+#                y = y
+#        )
         start = time.time()
 	r = requests.get(url)
         end = time.time()
@@ -56,8 +65,8 @@ def main():
 	#errors = len(results) - results.count(200)
 	errors = len(results) - len(filter(lambda x: x[0] == 200, results))
 	print('time: {0} ms, errors: {1} / {2}'.format(diff, errors, len(results)))
-        for r in results:
-           print("diff: %d %s" % (r[1], r[2]))
+        #for r in results:
+        #   print("diff: %d %s" % (r[1], r[2]))
 
 if __name__ == '__main__':
 	main()
