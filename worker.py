@@ -7,7 +7,8 @@ import requests
 import time
 
 THREAD_NUM = 8
-ENDPOINT = '149.156.9.143:8888/image/v0/api/bbic?fname=/srv/data'
+ENDPOINT = 'hbp-image-service.desy.de/image/v0/api/bbic?fname=/srv/data/HBP/'
+#ENDPOINT = '149.156.9.143:8888/image/v0/api/bbic?fname=/srv/data'
 #ENDPOINT = 'dcache-dot12.desy.de:8888/image/v0/api/bbic?fname=/srv/data/HBP'
 #ENDPOINT = 'hbp-image.desy.de:8888/image/v0/api/bbic?fname=/srv/data/HBP/'
 
